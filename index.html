@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabalho web</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-group">
+                <img src="logo-menu.png" alt="" class="logo-menu">
+                <ul class ="menu">
+                    <li>
+                        <a href="#sobre">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="#formacao">Formação</a>
+                    </li>
+                    <li>
+                        <a href="#projetos">Projetos</a>
+                    </li>
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="banner">
+            <div>
+                <h1>Fabricio Gomes</h1>
+                <p class="banner-text">Desenvolvedor Fullstack, dedicado a construir soluções digitais inovadoras.</p>
+            </div>
+            <img src="fundo-banner.png" alt="" class="image-banner">
+        </section>
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <div class="sobre-conteudo">
+                <img src="sobre-imagem.jpeg" alt="">
+                <p>
+                    Cillum occaecat eu labore deserunt labore reprehenderit esse sunt proident nulla. Labore voluptate ullamco velit nulla sunt tempor ex esse reprehenderit consectetur voluptate nulla. Mollit est ipsum nulla nulla ad culpa velit commodo eu. Mollit proident adipisicing eiusmod fugiat eiusmod do labore id voluptate et nulla.
+                </p>
+            </div>
+        </section>
+
+        <section id="formacao">
+            <h2>Formação</h2>
+            <div class="formacao-conteudo">
+                <img src="logo-uninter.png" alt="">
+                <div>
+                    <h3>UNINTER - Centro Universitário Internacional</h3>
+                    <p>Análise e Desenvolvimento de Sistemas</p>
+                    <span>04/2023 - 04/2025</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <div class="projetos-conteudo">
+                <img src="calculadora-projeto.png" alt="">
+                <div>
+                    <h3>Calculadora</h3>
+                    <p class="projetos-descricao">
+                        Uma calculadora minimalista criada por mim em JavaScript. Esta é uma pequena iniciativa pessoal para facilitar as operações matemáticas do dia a dia. Rápida, fácil e acessível, 
+                        essa calculadora é perfeita para resolver cálculos simples de forma eficaz.
+                    </p>
+                    <div>
+                        <a href="https://github.com/bijass/calculadora-javascript" class="button">Acesse aqui</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+        
+            <form action="." method="post" class="contato-conteudo">
+
+                <div class="form-campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+
+                <div class="form-campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-campo">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                </div>
+                
+                <button type="submit" class="button">Enviar</button>
+            </form>
+        
+        </section>
+    </div>
+
+    
+    <script>
+        document.querySelectorAll(".menu a").forEach(function (a) {
+        a.addEventListener("click", function (event) {
+            event.preventDefault();
+            const hash = event.target.getAttribute("href");
+            const scrollTarget = document.querySelector(hash);
+
+            const headerHeight = 100;
+            window.scrollTo(0, scrollTarget.offsetTop - headerHeight);
+            });
+        });
+    </script>
+</body>
+</html>
