@@ -1,31 +1,32 @@
+/* comando para importar uma fonte */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
+/* usando o asterisco para definir um padrão na página inteira */
 * {
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
-
+/* para ser usado no html e body sempre */
 html, body {
     margin: 0;
     border: 0;
     padding: 0;
 }
-
+/* tentativa de fazer a página suavizar o movimento quando apertado "Sobre" por exemplo */
 html {
     scroll-behavior: smooth;
 }
-
+/* padronizando o body */
 body {
     margin-top: 90px;
     background-color: #f0f3f6;
 }
-
+/* definindo um padrão de tamanho usando container */
 .container {
     max-width: 1360px;
     margin: 0 auto;
 }
-
+/* estilizando e colocando no lugar aonde ficaria o banner */
 .banner {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -42,6 +43,10 @@ body {
 
 .image-banner {
     width: 800px;
+}
+
+.sobre-conteudo p {
+    font-size: 20px;
 }
 
 .header {
